@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapping{
+    width: 1200px;
+    background-color: silver;
+    margin: 0px auto;
+}
+.wrapping * p{
+    font-size: 12px;
+    font-family: sans-serif;
+    line-height: 20px;
+}
+.columns{
+    display: inline-block;
+    margin: 0px 30px 0px 5px;
+    color: red;
+}
+    .columns li{
+        width: 55px;
+        height: 40px;
+        list-style-type: none;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        padding: 10px 0px 0px 0px;
+        margin-right: 2px;
+    }
+    #space{
+        margin-right: 10px;
+    }
+
+
+.rows{
+    display: inline-block;
+    color: red;
+    vertical-align: top;
+}
+    .rows li{
+        width: 55px;
+        height: 40px;
+        list-style-type: none;
+        margin-top: 21px;
+        text-align: center;
+    }
+.blue{
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+    margin-right: 12px;
+}
+    .blue li{
+        width: 55px;
+        height: 57px;
+        border: solid 1px black;
+        background-color: #00ccff;
+        text-align: center;
+        display: inline-block;
+        margin: 1px 0px;
+    }
+    .blue li h3{
+        font-family: sans-serif;
+        color: blue;
+    }
+    .blue li:first-child{
+        display: block;
+    }
+.red{
+    display: inline-block;
+    width: 608px;
+    vertical-align: bottom;
+    margin-right: 2px;
+    }
+    .red li{
+        width: 55px;
+        height: 57px;
+        border: solid 1px black;
+        background-color: #ff6666;
+        text-align: center;
+        display: inline-block;
+        margin: 1px 0px;
+    }
+    .red li h3{
+        font-family: sans-serif;
+        color: blue;
+    }
+.yellow{
+    display: inline-block;
+    width: 382px;
+    vertical-align: bottom;
+    }
+    .yellow li{
+        width: 55px;
+        height: 57px;
+        border: solid 1px black;
+        background-color:  #ffcc00;
+        text-align: center;
+        display: inline-block;
+        margin: 1px 0px;
+    }
+    .yellow li h3{
+        font-family: sans-serif;
+        color: blue;
+    }
+    .yellow li:first-child{
+        display: block;
+        margin-left: 305px;
+    }
+
+.rowsii{
+    display: inline-block;
+    color: red;
+    vertical-align: top;
+    text-align: left;
+    margin: 21px 44px 0px 31px;
+}
+    .rowsii li{
+        width: 55px;
+        height: 40px;
+        list-style-type: none;
+        margin-top: 21px;
+    }
+.rowsiii{
+    display: inline-block;
+    color: red;
+    vertical-align: top;
+    text-align: right;
+    margin-top: 15px;
+}
+    .rowsiii li{
+        width: 55px;
+        height: 40px;
+        list-style-type: none;
+        margin-top: 21px;
+    }
+
+.green{
+    display: inline-block;
+    width: 868px;
+    vertical-align: bottom;
+    margin-top: 15px;
+    }
+    .green li{
+        width: 55px;
+        height: 57px;
+        border: solid 1px black;
+        background-color: #00ff00;
+        text-align: center;
+        display: inline-block;
+        margin: 1px 0px;
+    }
+    .green li h3{
+        font-family: sans-serif;
+        color: blue;
+    }

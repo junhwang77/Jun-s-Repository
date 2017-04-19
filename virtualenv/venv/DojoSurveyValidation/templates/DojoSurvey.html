@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dojo Survey</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/DojoSurvey.css') }}">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <form class="" action="/process" method="post">
+                    <h4>Your Name:</h4> <input class="name" type="text" name="Name" placeholder = "name">
+                    <h4>Dojo Location:</h4>
+                    <select name="City">
+                        <option value="San Jose">San Jose</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Dallas">Dallas</option>
+                        <option value="Washington DC">Washington DC</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Orange County">Orange County</option>
+                        <option value="Berkeley">Berkeley</option>
+                    </select>
+                    <h4>Favorite Language:</h4>
+                    <select name="Language">
+                        <option value="Javascript">Javascript</option>
+                        <option value="Python">Python</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Java">Java</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="C++">C++</option>
+                    </select>
+                    <h4>Comment (Maximum 120 characters):</h4>
+                    <textarea name="comments" id="comments"></textarea>
+                    <p><input type = "submit" value = "submit" /></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>survey_form</title>
+    </head>
+    <body>
+        <form class="" action="/survey/process" method="post">
+            {% csrf_token %}
+            Your Name:<input type="text" name="your_name" value="">
+            Dojo Location:<input list="cities" name="dojo_location">
+                <datalist id="cities">
+                    <option value="Mountain View">
+                    <option value="San Jose">
+                    <option value="Berkeley">
+                    <option value="Seattle">
+                </datalist>
+            Favorite Language:<input list="languages" name="fav_language">
+                <datalist id="languages">
+                    <option value="JavaScript">
+                    <option value="Python">
+                    <option value="PHP">
+                    <option value="Ruby">
+                </datalist>
+            Comment (optional):<textarea name="opt_comment" rows="8" cols="80"></textarea>
+            <input type="submit" name="" value="Submit">
+            <input type="hidden" name="counter" value={{request.session.count}}>
+        </form>
+    </body>
+</html>

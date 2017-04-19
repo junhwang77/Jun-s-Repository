@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ContactCard</title>
+        <link rel="stylesheet" href="ContactCard.css" media="screen" title="no title">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(document).on('submit', 'form', function(){
+                    $("body").append("<div class='card'>" +
+                                            "<p>" + $('#fn').val() + " " + $('#ln').val() + "</p>" +
+                                            "<button type='button'>Click for description!</button>" + "<div id='desc'>" + $('#des').val() + "</div>" +
+                                    "</div>");
+                    $(".text_input").val("");
+                    return false;
+                });
+                $(document).on('click', 'button', function(){
+                    var temp = $(this).siblings('p').text();
+                    var tempp = $(this).siblings('div').text();
+                    console.log(temp);
+                    $(this).siblings('p').text(tempp);
+                    $(this).siblings('div').text(temp);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Make A Contact Card!</h1>
+        <form class="fillin">
+            <label for="">First name:</label>
+            <input class="text_input" id="fn" type="text" name="name" value="">
+            <label for="">Last name:</label>
+            <input class="text_input" id="ln" type="text" name="name" value="">
+            <label for="">Description:</label>
+            <textarea class="text_input" id="des" rows = "5" cols = "33" placeholder="Your text here"></textarea>
+            <input id="button" type="submit" name="name" value="Add User">
+        </form>
+    </body>
+</html>

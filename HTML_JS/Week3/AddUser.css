@@ -1,0 +1,29 @@
+tr{
+    vertical-align: top;
+}
+td{
+    margin: 5px;
+    text-align: center;
+}
+th p{
+    margin: 15px;
+}
+
+table{
+    border: solid 2px black;
+}
+h3 {
+    padding: 0px;
+    margin: 0px 20px;
+}
+
+ul li{
+    width: 244px;
+    list-style: none;
+    text-align: right;
+    margin: 10px;
+}
+h1{
+    width: 295px;
+    border-bottom: solid 3px silver;
+}

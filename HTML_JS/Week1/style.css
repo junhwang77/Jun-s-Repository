@@ -1,0 +1,15 @@
+.title {
+    font-family: calibri;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #00008B
+}
+
+.peeps {
+    text-align: center;
+}
+
+#highlight {
+    background-color: yellow
+}

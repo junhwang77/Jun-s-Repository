@@ -1,0 +1,14 @@
+.place {
+    width: 200px;
+    height: 200px;
+    border: 1px black solid;
+    text-align: center;
+    display: inline-block;
+}
+.counter {
+    width: 100px;
+    height: 20px;
+    border: 1px black solid;
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>adduser</title>
+        <link rel="stylesheet" href="AddUser.css" media="screen" title="no title">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("form").submit(function(){
+                    $(".table").append("<tr>" +
+                                            "<td>" + $("#fn").val() + "</td>" + "<td>" + $("#ln").val() + "</td>" + "<td>" + $("#ea").val() + "</td>" + "<td>" + $("#cn").val() + "</td>" +
+                                        "</tr>")
+                    $(".inputs").val("");
+                    return false;
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><h3>First Name</h3></th>
+                    <th><h3>Last Name</h3></th>
+                    <th><h3>Email Address</h3></th>
+                    <th><h3>Contact #</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+        <div class="AddUser">
+            <h1>Add User</h1>
+            <form class="info" action="index.html" method="post">
+                <ul>
+                    <li>First Name: <input type="text" name="fname" class="inputs" id="fn"></li>
+                    <li>Last Name: <input type="text" name="lname" class="inputs" id="ln"></li>
+                    <li>Email Address: <input type="text" name="Email" class="inputs" id="ea"></li>
+                    <li>Contact #: <input type="text" name="Contact" class="inputs" id=cn></li>
+                    <li><input id="button" type="submit" name="name" value="Add User"></li>
+                </ul>
+            </form>
+        </div>
+    </body>
+</html>

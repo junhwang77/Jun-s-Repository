@@ -1,0 +1,38 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+.wrapper {
+    width: 970px;
+    margin: 0px auto;
+}
+
+.box {
+    width: 300px;
+    border: solid black 2px;
+
+}
+
+h4 {
+    display: inline-block;
+    width: 155px;
+    vertical-align: top;
+    margin: 10px 0px;
+}
+
+p {
+    text-align: center;
+}
+
+.name {
+    margin: 10px 0px;
+}
+
+select {
+    margin: 10px 0px;
+}
+
+textarea {
+    margin: 10px 0px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="xxz">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Accordion and Tab UI</title>
+        <link rel="stylesheet" href="AccordionTab.css" media="screen" title="no title">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/trontastic/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#accordion").accordion({
+                    collapsible:true
+                });
+                $( "#tabs" ).tabs({
+                });
+                $( "#datepicker" ).datepicker()
+            });
+        </script>
+    </head>
+    <body>
+        <div id="accordion">
+            <h3>Section with Tabs</h3>
+            <div>
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1">What is this</a></li>
+                        <li><a href="#tabs-2">Proin dolor</a></li>
+                        <li><a href="#tabs-3">Aenean lacinia</a></li>
+                    </ul>
+                <div id="tabs-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="tabs-2">
+                    <p>Lorem ipsum non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="tabs-3">
+                    <p>Lorem.</p>
+                    </div>
+                </div>
+            </div>
+            <h3>Sections with Date picker</h3>
+            <div>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Date: <input type="text" id="datepicker"></p>
+            </div>
+            <h3>Lorem 3</h3>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <h3>Lorem 4</h3>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </body>
+
+</html>

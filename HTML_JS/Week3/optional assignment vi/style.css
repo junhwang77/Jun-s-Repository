@@ -1,0 +1,13 @@
+#error_message{
+	color:#FF0000;
+	margin-left:360px;
+}
+.form_container{
+	height:auto;
+	margin-left:300px;
+	padding:20px 0px 20px 60px;
+	width:275px;
+}
+.control-group{
+	margin-bottom:5px;
+}

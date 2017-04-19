@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register</title>
+    </head>
+    <body>
+        <h2>Registration</h2>
+        {% for error in request.session.errors %}
+          <p>{{error}}</p>
+        {% endfor %}
+        <form class="" action="{% url 'login_reg:create' %}" method="post">
+            {% csrf_token %}
+            <p>First Name:</p>
+            <input type="text" name="first_name" value="">
+            <p>Last Name:</p>
+            <input type="text" name="last_name" value="">
+            <p>Email:</p>
+            <input type="text" name="email" value="">
+            <p>Description:</p>
+            <textarea name="description" rows="8" cols="80"></textarea>
+            <p>Password:</p>
+            <input type="password" name="password" value="">
+            <p>Confirm Password:</p>
+            <input type="password" name="conf_pw" value="">
+            <input type="submit" name="" value="Register">
+        </form>
+    </body>
+</html>

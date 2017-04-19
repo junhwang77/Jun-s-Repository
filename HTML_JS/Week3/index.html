@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                console.log("Jquery running")
+                for(var i = 1; i < 10; i++){
+                    $('#Pokemon').append('<img id="'+i+'" src="https://pokeapi.co/media/img/'+i+'.png" alt=""/>');
+                };
+
+                $('body').on('click', 'img', function(){
+                    console.log("I'm a pokemon")
+                    var id = $(this).attr('id')
+                    console.log("id is:", id)
+                    $.get('http://pokeapi.co/api/v2/pokemon/'+id+'/',function(response){
+                        console.log(response)
+                        console.log(response['name'])
+                        $('#poke_info').html('<h2>Name</h2><p>'+response.name+'</p><h3>weight</h3><p>'+response.weight+'</p><img src="'+response.sprites.front_default+'">');
+                    })
+                })
+            });
+
+        </script>
+    </head>
+    <body>
+        <h1>PokeDex</h1>
+        <div id="poke_info">
+
+        </div>
+        <div id="Pokemon">
+
+        </div>
+    </body>
+</html>

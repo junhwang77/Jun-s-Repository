@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jstest</title>
+        <link rel="stylesheet" href="JavascriptTest.css" media="screen" title="no title">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".click h4").click(function(){
+                        alert('hello');
+                })
+                $(".addClass h4").click(function(){
+                    $(".addClass h4") .addClass("selected highlight");
+                })
+                $(".val h4").click(function(){
+                    $("input:text").val("Jun Hwang");
+                })
+                $(".text h4").click(function(){
+                    $( ".text h4" ).text( "specific text" );
+                })
+                $(".attr h4").click(function(){
+                    $(".attr img").attr("width", "100");
+                })
+                $(".html h4").click(function(){
+                        $( ".html h4" ).html("new content");
+                })
+                $(".focus h4").focus(function(){
+                        $(".focus h4").fadeOut(2000);
+                })
+                $(".data h4").click(function(){
+                    $(".container").data("greeting", "Hello Dojo");
+                })
+                $(".data h5").click(function(){
+                    alert($(".container").data("greeting"));
+                })
+                $(".before h4").click(function(){
+                        $(".before h4").before("_added before");
+                });
+                $(".after h4").click(function(){
+                        $(".after h4").after("_added after");
+                })
+                $(".append h4").click(function(){
+                        $(".append h4").append("_added@The End") ;
+                })
+                $(".show h4").click(function(){
+                        $(".show span").show() ;
+                })
+                $(".hide h4").click(function(){
+                        $(".hide span").hide();
+                })
+                $(".toggle h4").click(function(){
+                        $(".toggle span").toggle();
+                })
+                $(".fadeIn h4").click(function(){
+                        $(".fadeIn span").fadeIn();
+                })
+                $(".fadeOut h4").click(function(){
+                        $(".fadeOut span").fadeOut();
+                })
+                $(".slideDown h4").click(function(){
+                        $(".slideDown span").slideDown();
+                })
+                $(".slideUp h4").click(function(){
+                        $(".slideUp span").slideUp();
+                })
+                $(".slideToggle h4").click(function(){
+                        $(".slideToggle span").slideToggle();
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapping">
+            <div class="function">
+                <div class="button click">
+                    <h4>click</h4>
+                </div>
+                <div class="description">
+                    <h1>click()</h1>
+                    <p>
+                            Click the button to get a alert 'hello'
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button addClass">
+                    <h4>addClass</h4>
+                </div>
+                <div class="description">
+                    <h1>addClass()</h1>
+                    <p>
+                            Click the button to add class ".selected" to the matched element
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button val">
+                    <h4>val</h4>
+                    <p><input type="text" name="user"></p>
+                </div>
+                <div class="description">
+                    <h1>val()</h1>
+                    <p>
+                            Click the button to set the value of the input field
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button text">
+                    <h4>text</h4>
+                </div>
+                <div class="description">
+                    <h1>text()</h1>
+                    <p>
+                            Click the button to set the matched element to the specific text
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button attr">
+                    <h4>attr</h4>
+                    <img src="DisplayingBlocksimages/dojocat.jpg" alt="" width="26"/>
+                </div>
+                <div class="description">
+                    <h1>attr()</h1>
+                    <p>
+                            Click the button to change the attribute of the button
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button html">
+                    <h4>html</h4>
+                </div>
+                <div class="description">
+                    <h1>html()</h1>
+                    <p>
+                            Click the button to change the content of the button
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button focus">
+                    <h4>focus</h4>
+                </div>
+                <div class="description">
+                    <h1>focus()</h1>
+                    <p>
+                            Click the button to trigger focus event
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button data">
+                    <h4>attach data</h4>
+                    <h5>Get data</h5>
+                    <div class="container"></div>
+                </div>
+                <div class="description">
+                    <h1>data()</h1>
+                    <p>
+                            Click the attach data button then click the get data button to display the attached data
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button before">
+                    <h4>before</h4>
+                </div>
+                <div class="description">
+                    <h1>before()</h1>
+                    <p>
+                            Click the button to insert content before the button element
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button after">
+                    <h4>after</h4>
+                </div>
+                <div class="description">
+                    <h1>after()</h1>
+                    <p>
+                            Click the button to insert content after the button element
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button append">
+                    <h4>append</h4>
+                </div>
+                <div class="description">
+                    <h1>append()</h1>
+                    <p>
+                            Click the button to insert content at the end of an element
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button show">
+                    <h4><span>show</span></h4>
+                </div>
+                <div class="description">
+                    <h1>show()</h1>
+                    <p>
+                            Click the button to show content
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button hide">
+                    <h4><span>hide</span></h4>
+                </div>
+                <div class="description">
+                    <h1>hide()</h1>
+                    <p>
+                            Click the button to hide content
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button toggle">
+                    <h4><span>toggle</span></h4>
+                </div>
+                <div class="description">
+                    <h1>toggle()</h1>
+                    <p>
+                            Click the button to toggle between hide and show
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button fadeIn">
+                    <h4><span>fadeIn</span></h4>
+                </div>
+                <div class="description">
+                    <h1>fadeIn()</h1>
+                    <p>
+                            Click the button to fade in content
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button fadeOut">
+                    <h4><span>fadeOut</span></h4>
+                </div>
+                <div class="description">
+                    <h1>fadeOut()</h1>
+                    <p>
+                            Click the button to fade out content
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button slideDown">
+                    <h4><span>slideDown</span></h4>
+                </div>
+                <div class="description">
+                    <h1>slideDown()</h1>
+                    <p>
+                            Click the button to slide open the content
+                    </p>
+                </div>
+            </div>
+            <div class="function">
+                <div class="button slideUp">
+                    <h4><span>slideUp</span></h4>
+                </div>
+                <div class="description">
+                    <h1>slideUp()</h1>
+                    <p>
+                            Click the button to slide close the content
+                </div>
+            </div>
+            <div class="function">
+                <div class="button slideToggle">
+                    <h4><span>slideToggle</span></h4>
+                </div>
+                <div class="description">
+                    <h1>slideToggle()</h1>
+                    <p>
+                            Click the button to toggle between slide up and slide down
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

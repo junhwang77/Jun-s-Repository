@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+	<title>Date validations</title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// call datepicker
+			$("#date_from").datepicker({
+				minDate: 0,
+				onSelect: function (date) {
+		            var date2 = $('#date_from').datepicker('getDate');
+		            $('#date_to').datepicker('option', 'minDate', date2);
+	        	}
+			});	
+			$("#date_to").datepicker();	
+			
+			// form submit event
+			$("form").on("submit",function(){
+				
+				var errors = [];
+				var date_from = $("#date_from").val();
+				var date_to = $("#date_to").val();
+				var name = $("#name").val();
+			
+				// date validation
+				if(date_from == "")
+					errors.push("Date from cannot be empty");
+				if(date_to == "")
+					errors.push("Date to cannot be empty");
+				if(name == "")
+					errors.push("Name cannot be empty");
+				
+				// if there are errors:
+				if(errors.length > 0)
+				{
+					// clear message container to be able to append new error messages
+					$("#message").html("");
+					
+					for(var i in errors){
+						$("#message").append("<p id='error_message'>" + errors[i] + "</p>");
+					}
+					
+				}
+				// if there are no errors:
+				else
+				{
+					// clear message container to be able to append new error messages
+					$("#message").html("");
+					
+					alert("Thanks " + name + "! Your cruise leaves on " +
+						   date_from + " and returns on " + date_to + "!");
+				}
+				
+				return false;
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="form_container well">
+			<h5>Date Validation exercise</h5>
+			<form>
+				<div class="control-group">
+					<input type="text" id="date_from" class="datepicker" placeholder="From"/>
+				</div>
+				<div class="control-group">
+					<input type="text" id="date_to" class="datepicker" placeholder="To"/>
+				</div>
+				<div class="control-group">
+					<input type="text" id="name" placeholder="Name"/>
+				</div>
+				<div class="control-group">
+					<input type="submit" value="Check Dates" class="btn btn-success"/>
+				</div>
+			</form>
+		</div>
+		<div id="message"></div>
+	</div>
+</body>
+</html>

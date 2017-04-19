@@ -1,0 +1,72 @@
+*{
+    padding: 0px;
+    margin: 0px auto;
+}
+.function {
+    width: 700px;
+    display: block;
+    border-bottom: solid 3px grey;
+
+}
+
+.button {
+    display: inline-block;
+    height: 100px;
+    width: 260px;
+    vertical-align: top;
+    text-align: center;
+}
+.button h4{
+    border: solid 2px black;
+    display: inline-block;
+    margin: 35px 50px;
+    padding: 5px 10px;
+    vertical-align: top;
+    text-align: center;
+}
+.description{
+    width: 260px;
+    display: inline-block;
+}
+.description h1{
+    display: block;
+    margin: 20px 0px 10px 0px;
+    text-align: center;
+}
+.description p{
+    display: block;
+    vertical-align: top;
+    text-align: center;
+}
+
+    .selected {
+        color: blue;
+      }
+    .highlight {
+        background: yellow;
+      }
+.val h4{
+    border: solid 2px black;
+    display: inline-block;
+    margin: 35px 50px 10px 50px;
+    vertical-align: top;
+    text-align: center;
+}
+.attr img{
+    vertical-align: bottom;
+}
+.data h5{
+    border: solid 1px black;
+    display: inline;
+    vertical-align: bottom;
+    text-align: center;
+}
+.show span{
+    display: none;
+}
+.fadeIn span{
+    display: none;
+}
+.slideDown span{
+    display: none;
+}

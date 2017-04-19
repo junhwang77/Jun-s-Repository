@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.wrapping{
+    width: 655px;
+    margin: 0px auto;
+    background-color: #d4d1b0;
+    text-align: center;
+    padding: 25px 0px;
+}
+.heading {
+    text-align: center;
+}
+.heading h1{
+    display: inline-block;
+}
+.heading img{
+    width: 97px;
+    height: 50px;
+    max-height: 10%;
+    display: inline-block;
+    background-color: white;
+}
+
+.board{
+    display: inline-block;
+    font-size: 0;
+}
+
+.bluerow{
+    width: 118px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.bluebox{
+    padding: 10px;
+    border: solid 2px black;
+    background-color: lightblue;
+    display: inline-block;
+    margin: 2px;
+}
+.bluebox img{
+    width: 90px;
+    height: 90px;
+}
+
+.redrow{
+    width: 118px;
+    display: inline-block;
+    vertical-align: top;
+}
+.redbox{
+    padding: 10px;
+    border: solid 2px black;
+    background-color: #f16a72;
+    display: inline-block;
+    margin:2px;
+}
+.redbox img{
+    width: 90px;
+    height: 90px;
+}

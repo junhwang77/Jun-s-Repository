@@ -1,0 +1,21 @@
+{% for messages in all_messages %}
+    <h4>{{ messages['first_name'] }} {{ messages['last_name'] }} - {{ messages['updated_at'] }}</h4>
+    <p>{{ messages['message'] }}</p>
+    <input type="hidden" name="message_id" value="{{ messages['id'] }}">
+    <form class="" action="/messages/{{ messages['id'] }}/delete" method="post">
+        <input class="submit" type="submit" name="" value="Delete message">
+    </form>
+    <form class="" action="/add_comment" method="post">
+        <label for="comment">Post a comment <textarea name="comment" rows="5" cols="60"></textarea></label>
+        <input class="submit" type="submit" name="" value="comment">
+        <input type="hidden" name="user_id" value="{{ session['user_id'] }}">
+        <input type="hidden" name="message_id" value="{{ messages['id'] }}">
+    </form>
+    {% for comments in all_comments %}
+        <h5>{{ comments['first_name'] }} {{ comments['last_name'] }} - {{ comments['updated_at'] }}</h5>
+        <p>{{ comments['comment'] }}</p>
+    <form class="" action="/comments/{{ comments['id'] }}/delete" method="post">
+        <input class="submit" type="submit" name="" value="Delete comment">
+    </form>
+    {% endfor %}
+{% endfor %}

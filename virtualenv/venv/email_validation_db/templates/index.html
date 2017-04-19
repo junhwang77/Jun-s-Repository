@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Email Validation With Data Base</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css')}}">
+    </head>
+    <body>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="/success" method="post">
+            Enter Your Email Address:<input type="text" name="email" value="" placeholder="Your Email">
+            <input type="submit" name="Submit" value="Submit">
+        </form>
+
+        <div>
+           <h1>Email Addresses Entered:</h1>
+           <hr>
+           {% for email_addresses in all_emails: %}
+               <h3>{{ email_addresses['email'] }} {{ email_addresses['created_at']}}</h3>
+               <form class="" action="/{{ email_addresses['id'] }}" method='post'>
+                   <input type="submit" value="Delete Email">
+               </form>
+           {% endfor %}
+        </div>
+    </body>
+</html>

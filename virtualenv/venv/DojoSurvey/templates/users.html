@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>users</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/users.css') }}">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box">
+                <h4>Name: </h4><p>{{data['Name']}}</p>
+                <h4>Location: </h4><p>{{data['City']}}</p>
+                <h4>Language: </h4><p>{{data['Language']}}</p>
+                <h4>Comments: </h4><p>{{data['comments']}}</p>
+                <form action = '/'>
+                    <button>Return</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

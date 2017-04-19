@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Products</title>
+    </head>
+    <body>
+        <div class="">
+            <h2>Prodcts</h2>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>actions</th>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                        <tr>
+                            <td>{{product.name}}</td>
+                            <td>{{product.description}}</td>
+                            <td>{{product.price}}</td>
+                            <td>
+                                <form class="" action="/show/{{product.id}}" method="get">
+                                    <input type="submit" name="" value="Show">
+                                </form>
+                                <form class="" action="/edit/{{product.id}}" method="get">
+                                    <input type="submit" name="" value="Edit">
+                                </form>
+                                <form class="" action="/destroy/{{product.id}}" method="get">
+                                    <input type="submit" name="" value="Remove">
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <form class="" action="/new" method="get">
+                <input type="submit" name="" value="Add a new product">
+            </form>
+        </div>
+    </body>
+</html>

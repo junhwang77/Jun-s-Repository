@@ -1,0 +1,9 @@
+table, tr, th, td {
+    border: black 1px solid;
+    text-align: left;
+    border-spacing: 0;
+}
+.grey {
+    background-color: black;
+    color: white;
+}

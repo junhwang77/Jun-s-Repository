@@ -1,0 +1,12 @@
+.all_ninjas {
+    display: inline-block;
+    height: 222px;
+}
+
+.show {
+    height: 333px
+}
+
+#hidden {
+    display: none;
+}

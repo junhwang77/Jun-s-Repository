@@ -1,0 +1,1 @@
+SELECT * FROM emaildb.email_addresses

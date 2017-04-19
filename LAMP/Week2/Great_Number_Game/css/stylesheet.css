@@ -1,0 +1,30 @@
+.container {
+    text-align: center;
+}
+
+.red {
+    width: 300px;
+    height: 300px;
+    border: 1px black solid;
+    background-color: red;
+    display: inline-block;
+    margin: 10px;
+}
+
+.green {
+    width: 300px;
+    height: 300px;
+    border: 1px black solid;
+    background-color: green;
+    display: inline-block;
+    margin: 10px;
+}
+
+.yellow {
+    width: 300px;
+    height: 300px;
+    border: 1px black solid;
+    background-color: yellow;
+    display: inline-block;
+    margin: 10px;
+}

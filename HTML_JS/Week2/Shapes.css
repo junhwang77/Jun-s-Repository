@@ -1,0 +1,28 @@
+.Square{
+    width: 140px;
+    height: 140px;
+    background: blue;
+    display: inline-block;
+}
+.Circle{
+    width: 140px;
+    height: 140px;
+    background: red;
+    border-radius: 90px;
+    display: inline-block;
+}
+.Triangle{
+    border-top: solid 140px transparent;
+    border-right: solid 82.5px transparent;
+    border-left: solid 82.5px transparent;
+    border-bottom: solid 140px green;
+    display: inline-block;
+}
+.Pacman{
+    border-top: solid 70px yellow;
+    border-right: solid 70px transparent;
+    border-left: solid 70px yellow;
+    border-bottom: solid 70px yellow;
+    border-radius: 90px;
+    display: inline-block;
+}

@@ -1,0 +1,76 @@
+/*CSS reset settings here*/
+*{
+     margin: 0px;
+     padding: 0px;
+}
+#wrapper{
+     width: 970px;
+     background-color: white;
+     margin: 0px auto;
+     padding: 10px;
+}
+#header{
+     height: 70px;
+     background-color: #e6e6e6;
+     border-radius: 30px;
+     padding: 20px 0px 0px 20px;
+}
+
+#header h1{
+    font-size: 50px;
+    font-family: serif;
+}
+
+#navigation{
+     height: 300px;
+     width: 160px;
+     background-color: #e6e6e6;
+     display: inline-block;
+     margin: 20px 0px;
+     border-radius: 30px;
+     padding: 20px;
+}
+#navigation li{
+    margin: 5px 0px 0px 20px;
+}
+#navigation * ul{
+    list-style-type: circle;
+}
+
+#main_content{
+    height: 500px;
+    width: 705px;
+    background-color: silver;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0px 0px 20px;
+    border-radius: 30px;
+}
+#main_content h1{
+    margin: 20px 0px;
+}
+.subcontents{
+    height: 300px;
+    width: 650px;
+    background-color: silver;
+    display: inline-block;
+    margin:3px;
+    padding-left: 50px;
+}
+#sub li{
+    margin: 20px 0px;
+}
+#sub a{
+    font-weight: bold;
+}
+#sub p{
+    display: inline;
+}
+#advertisement{
+    height: 65px;
+    background-color: #e6e6e6;
+    border-radius: 30px;
+    padding: 20px 20px 0px 20px;
+    margin: 20px 0px;
+}

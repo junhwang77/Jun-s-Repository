@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Disappearing Ninja</title>
+        <link rel="stylesheet" href="disappearingninja.css" media="screen" title="no title">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("img").click(function(){
+                        $(this).fadeOut();
+                })
+                $("button").click(function(){
+                        $("img").fadeIn();
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="wrapping">
+            <h2 class="title">jQuery - assignment 1</h2>
+            <div class="fadeOut">
+                <img src="disappearingninja/ninja-icon.png" alt="" />
+            </div>
+            <div class="fadeOut">
+                <img src="disappearingninja/ninja-icon.png" alt="" />
+            </div>
+            <div class="fadeOut">
+                <img src="disappearingninja/ninja-icon.png" alt="" />
+            </div>
+            <div class="fadeOut">
+                <img src="disappearingninja/ninja-icon.png" alt="" />
+            </div>
+            <div class="fadeOut">
+                <img src="disappearingninja/ninja-icon.png" alt="" />
+            </div>
+            <div class="fadeOut">
+                <img src="disappearingninja/ninja-icon.png" alt="" />
+            </div>
+            <div class="fadeOut">
+                <img src="disappearingninja/ninja-icon.png" alt="" />
+            </div>
+            <div class="fadeOut">
+                <img src="disappearingninja/ninja-icon.png" alt="" />
+            </div>
+            <button type="button" name="button">RESTORE</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The wall</title>
+    </head>
+    <body>
+        <h6>Hi {{request.session.logged_name}}, this is the profile of:</h6>
+        <h3>{{request.session.first_name}} {{request.session.last_name}}</h3>
+
+        <p></p>
+        <h4>Leave a message for {{request.session.first_name}}</h4>
+        <form class="" action="/thewall/post/{{request.session.id}}" method="post">
+            {% csrf_token %}
+            <textarea name="mes" rows="8" cols="80"></textarea>
+            <input type="submit" name="" value="Post">
+            <input type="hidden" name="master" value="{{request.session.first_name}}">
+            <input type="hidden" name="logged_id" value="{{request.session.logged_id}}">
+        </form>
+        {% for message in messages %}
+                <p>{{message.user_id.first_name}} {{message.user_id.last_name}}</p>
+                <p>{{message.message}}</p>
+                <form class="" action="/thewall/comment/{{request.session.id}}" method="post">
+                    {% csrf_token %}
+                    <textarea name="comment" rows="5" cols="50"></textarea>
+                    <input type="submit" name="" value="Comment">
+                    <input type="hidden" name="mes_id" value="{{message.id}}">
+                    <input type="hidden" name="logged_id" value="{{request.session.logged_id}}">
+                </form>
+                <form class="" action="/thewall/destroy/{{request.session.id}}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" name="" value="Delete">
+                    <input type="hidden" name="mes_id" value="{{message.id}}">
+                </form>
+                {% for comment in comments %}
+                    {% if comment.message_id == message.id %}
+                        <p>{{comment.comment}}</p>
+                    {% endif %}
+                {% endfor %}
+        {% endfor %}
+    </body>
+</html>

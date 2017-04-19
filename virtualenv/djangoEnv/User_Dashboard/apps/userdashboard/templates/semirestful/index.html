@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>User Manager</title>
+    </head>
+    <body>
+        <div class="">
+            <h4>Welcome {{request.session.first_name}}!</h4>
+            <h2>Manage Users</h2>
+            <form class="" action="/new" method="get">
+                <input type="submit" name="" value="Add a new user">
+            </form>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>email</th>
+                    <th>created_at</th>
+                    <th>user_level</th>
+                    <th>actions</th>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>
+                            <form class="" action="{% url 'thewall:wall' id=user.id %}" method="post">
+                                {% csrf_token %}
+                                <input type="submit" name="" value="{{user.first_name}} {{user.last_name}}">
+                                <input type="hidden" name="first_name" value="{{user.first_name}}">
+                                <input type="hidden" name="last_name" value="{{user.last_name}}">
+                                <input type="hidden" name="logged_name" value="{{request.session.first_name}}">
+                                <input type="hidden" name="logged_id" value="{{request.session.id}}">
+                            </form>
+                            </td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.created_at}}</td>
+                            <td></td>
+                            <td>
+                                <form class="" action="/semirestful/edit/{{user.id}}" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="" value="Edit">
+                                </form>
+                            </td>
+                            <td>
+                                <form class="" action="/destroy/{{user.id}}" method="get">
+                                    <input type="submit" name="" value="Remove">
+                                </form>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
